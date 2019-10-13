@@ -7,9 +7,9 @@ namespace TwigCS\Report;
  */
 class Report
 {
-    const MESSAGE_TYPE_NOTICE  = 0;
-    const MESSAGE_TYPE_WARNING = 1;
-    const MESSAGE_TYPE_ERROR   = 2;
+    public const MESSAGE_TYPE_NOTICE  = 0;
+    public const MESSAGE_TYPE_WARNING = 1;
+    public const MESSAGE_TYPE_ERROR   = 2;
 
     /**
      * @var SniffViolation[]

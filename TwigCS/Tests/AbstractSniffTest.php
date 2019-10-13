@@ -2,9 +2,9 @@
 
 namespace TwigCS\Tests;
 
-use \Exception;
-use \ReflectionClass;
+use Exception;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 use TwigCS\Environment\StubbedEnvironment;
 use TwigCS\Report\SniffViolation;
 use TwigCS\Ruleset\Ruleset;

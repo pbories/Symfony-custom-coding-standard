@@ -2,7 +2,7 @@
 
 namespace TwigCS\Token;
 
-use \Exception;
+use Exception;
 use Twig\Environment;
 use Twig\Source;
 
@@ -11,19 +11,19 @@ use Twig\Source;
  */
 class Tokenizer
 {
-    const STATE_DATA          = 0;
-    const STATE_BLOCK         = 1;
-    const STATE_VAR           = 2;
-    const STATE_STRING        = 3;
-    const STATE_INTERPOLATION = 4;
-    const STATE_COMMENT       = 5;
+    public const STATE_DATA          = 0;
+    public const STATE_BLOCK         = 1;
+    public const STATE_VAR           = 2;
+    public const STATE_STRING        = 3;
+    public const STATE_INTERPOLATION = 4;
+    public const STATE_COMMENT       = 5;
 
-    const REGEX_NAME            = '/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/A';
-    const REGEX_NUMBER          = '/[0-9]+(?:\.[0-9]+)?/A';
-    const REGEX_STRING          = '/"([^#"\\\\]*(?:\\\\.[^#"\\\\]*)*)"|\'([^\'\\\\]*(?:\\\\.[^\'\\\\]*)*)\'/As';
-    const REGEX_DQ_STRING_DELIM = '/"/A';
-    const REGEX_DQ_STRING_PART  = '/[^#"\\\\]*(?:(?:\\\\.|#(?!\{))[^#"\\\\]*)*/As';
-    const PUNCTUATION           = '()[]{}?:.,|';
+    public const REGEX_NAME            = '/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/A';
+    public const REGEX_NUMBER          = '/[0-9]+(?:\.[0-9]+)?/A';
+    public const REGEX_STRING          = '/"([^#"\\\\]*(?:\\\\.[^#"\\\\]*)*)"|\'([^\'\\\\]*(?:\\\\.[^\'\\\\]*)*)\'/As';
+    public const REGEX_DQ_STRING_DELIM = '/"/A';
+    public const REGEX_DQ_STRING_PART  = '/[^#"\\\\]*(?:(?:\\\\.|#(?!\{))[^#"\\\\]*)*/As';
+    public const PUNCTUATION           = '()[]{}?:.,|';
 
     /**
      * @var array

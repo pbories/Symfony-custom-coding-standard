@@ -6,7 +6,7 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Checks that there are not 2 empty lines following each other.
+ * Checks space around doc comment tag
  */
 class DocCommentTagSpacingSniff implements Sniff
 {

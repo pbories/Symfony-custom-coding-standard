@@ -13,10 +13,10 @@ use Symfony\Component\Console\Style\SymfonyStyle;
  */
 class TextFormatter
 {
-    const ERROR_CURSOR_CHAR   = '>>';
-    const ERROR_LINE_FORMAT   = '%-5s| %s';
-    const ERROR_CONTEXT_LIMIT = 2;
-    const ERROR_LINE_WIDTH    = 120;
+    public const ERROR_CURSOR_CHAR   = '>>';
+    public const ERROR_LINE_FORMAT   = '%-5s| %s';
+    public const ERROR_CONTEXT_LIMIT = 2;
+    public const ERROR_LINE_WIDTH    = 120;
 
     /**
      * Input-output helper object.

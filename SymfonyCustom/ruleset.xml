@@ -11,8 +11,9 @@
     <!-- ************** -->
 
     <!-- Include the whole PSR-2 (so PSR-1) standard without the file length limit -->
-    <rule ref="PSR2">
+    <rule ref="PSR12">
         <exclude name="Generic.Files.LineLength"/>
+        <exclude name="PSR12.Operators.OperatorSpacing"/>
     </rule>
 
     <!-- Override SuperfluousWhitespace to not ignore blank lines -->
@@ -66,12 +67,6 @@
     <!-- Whitespace -->
     <rule ref="Squiz.WhiteSpace.CastSpacing"/>
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
-    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
-    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
-        <properties>
-            <property name="ignoreNewlines" value="true"/>
-        </properties>
-    </rule>
     <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
         <properties>
             <property name="ignoreNewlines" value="true"/>

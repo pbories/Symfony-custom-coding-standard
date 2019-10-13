@@ -6,9 +6,9 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Checks that there are no white space after ? in the type hint.
+ * Ensures there are no spaces on "!" boolean operator.
  */
-class NullableTypeHintSpacingSniff implements Sniff
+class BooleanNotOperatorSpacingSniff implements Sniff
 {
     /**
      * Returns an array of tokens this test wants to listen for.
@@ -18,7 +18,7 @@ class NullableTypeHintSpacingSniff implements Sniff
     public function register()
     {
         return [
-            T_NULLABLE,
+            T_BOOLEAN_NOT,
         ];
     }
 
@@ -34,13 +34,15 @@ class NullableTypeHintSpacingSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        if (isset($tokens[($stackPtr + 1)]) && T_WHITESPACE === $tokens[($stackPtr + 1)]['code']) {
-            $error = 'There should be no space after a nullable type hint';
-            $fix = $phpcsFile->addFixableError($error, $stackPtr, 'SpaceAfterNullableTypeHint');
+        if (T_WHITESPACE !== $tokens[$stackPtr + 1]['code']) {
+            return;
+        }
 
-            if (true === $fix) {
-                $phpcsFile->fixer->replaceToken($stackPtr + 1, '');
-            }
+        $error = 'A not operator statement must not be followed by a space';
+        $fix = $phpcsFile->addFixableError($error, $stackPtr, 'BooleanNot');
+
+        if (true === $fix) {
+            $phpcsFile->fixer->replaceToken($stackPtr + 1, '');
         }
     }
 }

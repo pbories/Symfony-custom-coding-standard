@@ -5,11 +5,11 @@ namespace SymfonyCustom\Tests\WhiteSpace;
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
 /**
- * Unit test class for the NullableTypeHintSpacingUnit sniff.
+ * Unit test class for the ArithmeticUnaryOperatorSpacing sniff.
  *
  * @group SymfonyCustom
  */
-class NullableTypeHintSpacingUnitTest extends AbstractSniffUnitTest
+class ArithmeticUnaryOperatorSpacingUnitTest extends AbstractSniffUnitTest
 {
     /**
      * Returns the lines where errors should occur.
@@ -22,8 +22,10 @@ class NullableTypeHintSpacingUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [
-            3 => 1,
-            6 => 1,
+            4  => 1,
+            6  => 1,
+            9  => 1,
+            10 => 1,
         ];
     }
 
@@ -33,7 +35,7 @@ class NullableTypeHintSpacingUnitTest extends AbstractSniffUnitTest
      * The key of the array should represent the line number and the value
      * should represent the number of warnings that should occur on that line.
      *
-     * @return array(int => int)
+     * @return array<int, int>
      */
     protected function getWarningList()
     {

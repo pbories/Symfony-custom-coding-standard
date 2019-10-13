@@ -5,11 +5,11 @@ namespace SymfonyCustom\Tests\WhiteSpace;
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
 /**
- * Unit test class for the ReturnTypeHintSpacingUnit sniff.
+ * Unit test class for the BooleanNotOperatorSpacingUnitTest sniff.
  *
  * @group SymfonyCustom
  */
-class ReturnTypeHintSpacingUnitTest extends AbstractSniffUnitTest
+class BooleanNotOperatorSpacingUnitTest extends AbstractSniffUnitTest
 {
     /**
      * Returns the lines where errors should occur.
@@ -22,8 +22,7 @@ class ReturnTypeHintSpacingUnitTest extends AbstractSniffUnitTest
     public function getErrorList()
     {
         return [
-            6 => 1,
-            9 => 2,
+            4 => 1,
         ];
     }
 
@@ -33,7 +32,7 @@ class ReturnTypeHintSpacingUnitTest extends AbstractSniffUnitTest
      * The key of the array should represent the line number and the value
      * should represent the number of warnings that should occur on that line.
      *
-     * @return array(int => int)
+     * @return array<int, int>
      */
     protected function getWarningList()
     {
